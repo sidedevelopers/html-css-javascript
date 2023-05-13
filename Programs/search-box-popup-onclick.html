@@ -1,0 +1,72 @@
+<div class="position-relative"> <!-- add position relative in parent div -->
+    <a id="togglesearch-btn"></a> or <img id="togglesearch-btn" /> <!-- add id in img or <a> -->
+    <form action="#" method="GET"> <!-- add site_url() in action for wordpress -->
+        <div class="togglesearch">
+            <input type="text" placeholder="Search" name="s" required="required" id="togglesearch-input" />
+            <input type="submit" value="Search" />
+            <input type="hidden" name="post_type" value="product" /> <!-- For Wordpress product search -->
+        </div>
+    </form>
+</div>
+
+<style>
+/* togglesearch css start */
+.togglesearch {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 326px;
+	height: 58px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-top: 4px solid var(--primary-color);
+    display: none;
+    padding-top: 9px;
+    z-index: 1; /* add because for front overlay */
+}
+.togglesearch:before {
+    content: '';
+    position: absolute;
+    top: -32px;
+    right: 13px;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 14px solid transparent;
+    border-bottom: 14px solid var(--primary-color);
+}
+.togglesearch input[type="text"] {
+    width: 200px;
+    padding: 5px 10px;
+    margin-left: 23px;
+    border: 1px solid #000;
+    outline: none;
+	/* color: #fff; */
+	/* background-color: #000; */
+}
+/* For change placeholder text color
+.togglesearch input[type="text"]::placeholder {
+  color: #fff;
+} 
+*/
+.togglesearch input[type="submit"] {
+    width: 80px;
+    padding: 5px 0;
+    background-color: var(--primary-color);
+    color: #fff;
+    margin-left: -6px;
+    border: 1px solid var(--primary-color);
+    outline: none;
+    cursor: pointer;
+}
+/* togglesearch css end */
+</style>
+
+<script>
+    /* togglesearch javascript start */
+    $(document).ready(function () {
+        $("#togglesearch-btn").click(function () {
+            $(".togglesearch").toggle();
+            $("#togglesearch-input").focus();
+        });
+    });
+    /* togglesearch javascript end */
+</script>
