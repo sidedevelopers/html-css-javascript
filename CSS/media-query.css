@@ -1,0 +1,13 @@
+/* View Point For Mobile Devices */
+@media only screen and (max-width: 768px){
+    .class {
+        display: inline;
+    }
+}
+
+/* View Point For Desktop Site */
+@media only screen and (min-width: 768.1px) and (max-width: 992px){
+	.class {
+	    display: inline;
+	}		
+}
