@@ -11,3 +11,15 @@
 	    display: inline;
 	}		
 }
+
+/* View Point For 110% Screen */
+@media only screen and (min-width: 1126px) and (max-width: 1300px){
+    .class {
+        top: 32px;
+    }
+  }
+
+/* Not Tested View Point */
+@media only screen and (min-width: 1300px) and (max-width: 1469px){
+	
+}
