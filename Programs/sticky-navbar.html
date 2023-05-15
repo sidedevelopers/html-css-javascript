@@ -1,0 +1,32 @@
+<!-- https://bootstrap-menu.com/detail-fixed-onscroll.html -->
+
+<nav id="sticky-navbar" class="navbar navbar-expand-xl">
+
+</nav>
+
+<script>
+    // sticky navbar start
+    document.addEventListener("DOMContentLoaded", function(){
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                document.getElementById('sticky-navbar').classList.add('fixed-top');
+                // add padding top to show content behind navbar
+                navbar_height = document.querySelector('.navbar').offsetHeight;
+                document.body.style.paddingTop = navbar_height + 'px';
+            }
+            else {
+                document.getElementById('sticky-navbar').classList.remove('fixed-top');
+                // remove padding top from body
+                document.body.style.paddingTop = '0';
+            } 
+        });
+    });
+    // sticky navbar end
+</script>
+
+<style>
+    /* optional css */
+    .fixed-top {
+        box-shadow: 0 1px 5px rgb(60 66 76 / 30%);
+    }
+</style>

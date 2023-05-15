@@ -1,3 +1,9 @@
-/* Horizontal to Vertical Move CSS */
-/* -webkit-writing-mode: vertical-lr; */
+/* .horizontal-to-vertical-move{
+    -webkit-writing-mode: vertical-lr;
+} */
 
+/* ######################################################### */
+
+.navbar-shadow{
+    box-shadow: 0 1px 5px rgb(60 66 76 / 30%);
+}

@@ -1,0 +1,13 @@
+/*
+syntax
+transition: [transition-property] [transition-duration] [transition-timing-function] [transition-delay];
+transition: background-color .5s ease-out .5s;
+
+[transition-property] - 
+
+[transition-duration]
+
+[transition-timing-function]
+
+[transition-delay]
+*/

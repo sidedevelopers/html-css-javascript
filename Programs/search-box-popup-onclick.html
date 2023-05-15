@@ -1,8 +1,14 @@
+<!--
+One Improvement: on click #togglesearch-btn > togglesearch-input.focus() working only one time
+Replace: 1. form action for wordpress, 2. --primary-color 
+-->
+
 <div class="position-relative"> <!-- add position relative in parent div -->
-    <a id="togglesearch-btn"></a> or <img id="togglesearch-btn" /> <!-- add id in img or <a> -->
+    <a role="button" id="togglesearch-btn"></a> or <img id="togglesearch-btn" /> <!-- add id in img or <a> -->
+    <!-- Not use href because of link go to #.. for this add role="button" -->
     <form action="#" method="GET"> <!-- add site_url() in action for wordpress -->
         <div class="togglesearch">
-            <input type="text" placeholder="Search" name="s" required="required" id="togglesearch-input" />
+            <input type="search" placeholder="Search" name="s" required="required" id="togglesearch-input" />
             <input type="submit" value="Search" />
             <input type="hidden" name="post_type" value="product" /> <!-- For Wordpress product search -->
         </div>
@@ -33,7 +39,7 @@
     border-top: 14px solid transparent;
     border-bottom: 14px solid var(--primary-color);
 }
-.togglesearch input[type="text"] {
+.togglesearch input[type="search"] {
     width: 200px;
     padding: 5px 10px;
     margin-left: 23px;
@@ -41,6 +47,10 @@
     outline: none;
 	/* color: #fff; */
 	/* background-color: #000; */
+}
+.togglesearch input[type="search"]::-webkit-search-cancel-button {
+	position: relative;
+    right: -4px;
 }
 /* For change placeholder text color
 .togglesearch input[type="text"]::placeholder {
@@ -69,4 +79,14 @@
         });
     });
     /* togglesearch javascript end */
+
+
+    //this Code can add animation effect beautifully
+    $(document).ready(function () {
+        $("#togglesearch-btn").click(function () {
+            $(".togglesearch").toggle(function () {
+                $("#togglesearch-input").focus();
+            });
+        });
+    });
 </script>
