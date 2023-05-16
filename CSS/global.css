@@ -1,10 +1,25 @@
 /* global css start */
+
 :root {
     --primary-color: #7e34b6;
     --secondary-color: #fdf4f3;
     --heading-color: #3c424f;
 }
-
+.form-control:focus {
+    box-shadow: unset;
+}
+a,
+a:hover {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+/* max width 90% only in pc */
+@media only screen and (min-width: 768px) {
+	.container-pc-90{
+		max-width: 90%;
+	}
+}
 /* @media only screen and (max-width: 768px){ */
 /* @media only screen and (min-width: 768.1px) and (max-width: 992px){ */
+
 /* global css end */
