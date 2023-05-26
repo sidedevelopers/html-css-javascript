@@ -1,0 +1,82 @@
+<!-- fixed bottom mobile menu start -->
+<div class="navigation d-block d-md-none">
+    <ul>
+        <li>
+            <a href="#">
+                <span class="icon"><i class="ti ti-home"></i></span>
+                <span class="text">Home</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="icon"><i class="ti ti-shopping-cart-full"></i></span>
+                <span class="text">Cart</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="icon"><i class="ti ti-comments-smiley"></i></span>
+                <span class="text">Shop</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="icon"><i class="ti ti-user"></i></span>
+                <span class="text">Account</span>
+            </a>
+        </li>
+        <li>
+            <a role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar1" aria-controls="offcanvasNavbar">
+                <span class="icon"><i class="ti ti-menu-alt"></i></span>
+                <span class="text">Menu</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<!-- fixed bottom mobile menu end -->
+
+<style>
+    /* fixed bottom mobile menu start */
+    .navigation{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background: #fff;
+        z-index: 10;
+        box-shadow: 0 1px 5px rgb(60 66 76 / 30%);
+    }
+    .navigation ul{
+        list-style: none;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 0.5rem 0;
+        margin: 0;
+    }
+    .navigation ul li{
+        text-align: center;
+    }
+    .navigation ul li a span{
+        display: block;
+        color: #000;
+    }
+    .navigation ul li a span:hover{
+        color: var(--primary-color);
+    }
+    .navigation ul li a span.icon{
+        font-size: 22px;
+    }
+    .navigation ul li a span.text{
+        font-size: 15px;
+        margin-top: -4px;
+    }
+    /* add this class in footer tag copyright section */
+    @media only screen and (max-width: 768px) {
+        .mobile-footer-menu{
+            margin-bottom: 70px;
+        }
+    }
+    /* fixed bottom mobile menu end */
+</style>
+
+<!-- https://themify.me/themify-icons -->
+<!-- https://ionic.io/ionicons  suggested by youtube video https://www.youtube.com/watch?v=1-U4s6oW0qw -->
