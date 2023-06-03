@@ -1,0 +1,13 @@
+<img src="" id="img" /> 
+
+<script>
+    // Rotate a image clockwise (for anticlockwise replace + with -)
+    const img = document.getElementById('img');
+    let rotationAngle = 0;
+
+    setInterval(function () {
+        rotationAngle += 1; // 6 degrees every second (360 degrees / 60 seconds)
+        img.style.transform = `rotate(${rotationAngle}deg)`;
+    }, 10);
+</script>
+
