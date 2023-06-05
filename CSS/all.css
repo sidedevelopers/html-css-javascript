@@ -4,6 +4,12 @@
 
 /* ######################################################### */
 
+/* Navbar Shadow */
 .navbar-shadow{
     box-shadow: 0 1px 5px rgb(60 66 76 / 30%);
+}
+
+/* Reference By Airport Website */
+.filter-brightness {
+    filter: brightness(0.5);
 }
