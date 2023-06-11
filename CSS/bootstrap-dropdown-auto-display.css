@@ -1,0 +1,36 @@
+/* <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Dropdown
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end fade-up">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+    </ul>
+</li> */
+
+/* add class dropdown-menu-end and fade-up in ul */
+
+@media all and (min-width: 992px) {
+    .navbar .dropdown-menu-end {
+        right: auto;
+        left: 0;
+    }
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s;
+        margin-top: 0;
+    }
+    .navbar .dropdown-menu.fade-up {
+        top: 180%;
+    }
+    .navbar .nav-item:hover .dropdown-menu {
+        transition: 0.3s;
+        opacity: 1;
+        visibility: visible;
+        top: 100%;
+        transform: rotateX(0deg);
+    }
+}
