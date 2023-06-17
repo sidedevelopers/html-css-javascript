@@ -1,0 +1,69 @@
+<!-- 
+Website: https://owlcarousel2.github.io/OwlCarousel2/
+Name: Owl Carousel 2
+Latest Version 2.3.4
+Github: https://github.com/OwlCarousel2/OwlCarousel2
+-->
+
+<style>
+    /* change active dots color */
+    .owl-theme .owl-dots .owl-dot.active span,
+    .owl-theme .owl-dots .owl-dot:hover span {
+        background-color: var(--color-primary);
+    }
+
+    /* Set Nav in left & right */
+    .owl-carousel .owl-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        z-index: -1;
+        /* use when on hover not working */
+    }
+
+    .owl-carousel .owl-nav .owl-prev {
+        margin-left: -30px;
+        /* Adjust as needed */
+    }
+
+    .owl-carousel .owl-nav .owl-next {
+        margin-right: -30px;
+        /* Adjust as needed */
+    }
+
+    /* icon background remove on hover */
+    .owl-theme .owl-nav [class*="owl-"]:hover {
+        background: transparent;
+        color: var(--color-primary);
+    }
+</style>
+
+<script>
+    $(".testimonial-carousel").owlCarousel({
+        autoplay: true,
+        items: 3,
+        dots: true,
+        loop: true,
+        nav: true,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            485: {
+                items: 1,
+            },
+            768: {
+                items: 2,
+            },
+            960: {
+                items: 3,
+            },
+            1200: {
+                items: 3,
+            },
+        },
+    });
+</script>

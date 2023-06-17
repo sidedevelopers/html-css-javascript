@@ -5,7 +5,7 @@
 /* ######################################################### */
 
 /* Navbar Shadow */
-.navbar-shadow{
+.navbar-shadow {
     box-shadow: 0 1px 5px rgb(60 66 76 / 30%);
 }
 
@@ -13,3 +13,20 @@
 .filter-brightness {
     filter: brightness(0.5);
 }
+
+/* ######################################################### */
+
+.card > a {
+    /* .card > a selector targets the <a> that are direct children of the .card element.
+    Its not target the .card .card-body a */
+    color: red;
+    font-weight: bold;
+}
+
+.card-body a {
+    /* Its Apply on both .card a & .card .card-body a and all a of .card */
+    color: blue;
+    font-weight: normal;
+}
+
+/* ######################################################### */
