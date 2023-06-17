@@ -1,0 +1,19 @@
+/* Navbar Dropdown start */
+.dropdown-menu {
+    padding: 0;
+    border-radius: 0;
+}
+.dropdown-menu li a {
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+.dropdown-menu li a:hover {
+    background-color: var(--color-primary);
+    color: #fff;
+}
+@media (min-width: 992px) {
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+}
+/* Navbar Dropdown End */
