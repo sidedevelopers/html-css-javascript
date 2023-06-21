@@ -1,0 +1,119 @@
+<!-- Toast start -->
+<div class="toast-container position-fixed bottom-0 start-0 p-3">
+    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <i class="ti-shopping-cart-full rounded me-2"></i>
+            <strong class="me-auto">Purchased</strong>
+            <small>11 mins ago</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            <a href="#" id="product-href">
+                <img id="product-src" src="assets/images/Chandan.jpg" width="40" height="40" class="me-3 float-start" />
+                <strong id="customerName">Mr. Anu</strong> from <strong id="cityName">Delhi</strong> purchased<br>
+                <strong id="productName">Lorem ipsum dolor sit amet.</strong>
+            </a>
+        </div>
+    </div>
+</div>
+
+<ul id="productsPopu" class="d-none">
+    <li data-name="product1 Lorem, ipsum." data-href="http://localhost/html/kastooree/about-us.php"
+        data-src="http://localhost/html/kastooree/assets/images/Chandan.jpg">
+    </li>
+    <li data-name="product2 Lorem, ipsum." data-href="http://localhost/html/kastooree/about-us.php"
+        data-src="http://localhost/html/kastooree/assets/images/Chandan.jpg">
+    </li>
+    <li data-name="product3 Lorem, ipsum." data-href="http://localhost/html/kastooree/about-us.php"
+        data-src="http://localhost/html/kastooree/assets/images/Chandan.jpg">
+    </li>
+    <li data-name="product4 Lorem, ipsum." data-href="http://localhost/html/kastooree/about-us.php"
+        data-src="http://localhost/html/kastooree/assets/images/Chandan.jpg">
+    </li>
+    <li data-name="product5 Lorem, ipsum." data-href="http://localhost/html/kastooree/about-us.php"
+        data-src="http://localhost/html/kastooree/assets/images/Chandan.jpg">
+    </li>
+    <li data-name="product6 Lorem, ipsum." data-href="http://localhost/html/kastooree/about-us.php"
+        data-src="http://localhost/html/kastooree/assets/images/Chandan.jpg">
+    </li>
+    <li data-name="product7 Lorem, ipsum." data-href="http://localhost/html/kastooree/about-us.php"
+        data-src="http://localhost/html/kastooree/assets/images/Chandan.jpg">
+    </li>
+</ul>
+<!-- Toast End -->
+
+<script>
+    // Function to display the toast with a specific message and customer name
+    function displayPurchaseToast(customerName, cityName, productName, productHref, productSrc) {
+
+        var customerNameElement = document.getElementById('customerName');
+        customerNameElement.textContent = customerName;
+
+        var cityNameElement = document.getElementById('cityName');
+        cityNameElement.textContent = cityName;
+
+        var productNameElement = document.getElementById('productName');
+        productNameElement.textContent = productName;
+
+        var productHrefElement = document.getElementById('product-href');
+        productHrefElement.href = productHref;
+
+        var productSrcElement = document.getElementById('product-src');
+        productSrcElement.src = productSrc;
+
+        var toast = new bootstrap.Toast(document.getElementById('liveToast'));
+        toast.show();
+    }
+
+    // Function to shuffle an array using Fisher-Yates algorithm
+    function shuffleArray(array) {
+        for (var i = array.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
+        return array;
+    }
+
+    // Function to simulate purchase events
+    function simulatePurchaseEvents() {
+
+        var customers_array = ['Deepak', 'Soniya', 'Anjali', 'Sagar', 'Shivam', 'Satyam', 'Aditya'];
+        var customers_array1 = shuffleArray(customers_array);
+
+        var city_array = ['Delhi', 'Moradabad', 'Almora', 'Bareilly', 'Kashipur', 'Gujrat', 'Mumbai'];
+        var city_array1 = shuffleArray(city_array);
+
+        // Fetch the HTML elements and convert them into an array
+        var productsPopu = Array.from(document.querySelectorAll('#productsPopu li'));
+
+        // Extract the data from each element
+        var products_array = productsPopu.map(function (item) {
+            return item.getAttribute('data-name');
+        });
+
+        var href_array = productsPopu.map(function (item) {
+            return item.getAttribute('data-href');
+        });
+
+        var src_array = productsPopu.map(function (item) {
+            return item.getAttribute('data-src');
+        });
+
+        var index = 0;
+
+        setInterval(function () {
+            var customerName = customers_array1[index % customers_array1.length];
+            var cityName = city_array1[index % city_array1.length];
+            var productName = products_array[index % products_array.length];
+            var productHref = href_array[index % href_array.length];
+            var productSrc = src_array[index % src_array.length];
+            displayPurchaseToast(customerName, cityName, productName, productHref, productSrc);
+            index++;
+        }, 10000);
+    }
+
+    // Initialize the purchase event simulation
+    simulatePurchaseEvents();
+</script>
