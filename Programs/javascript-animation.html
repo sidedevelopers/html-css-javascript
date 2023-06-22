@@ -1,0 +1,113 @@
+<section class="animate-section animate-left">
+    <!-- Content of your section here -->
+</section>
+<section class="animate-section animate-right">
+    <!-- Content of your section here -->
+</section>
+<section class="animate-section animate-top">
+    <!-- Content of your section here -->
+</section>
+<section class="animate-section animate-bottom">
+    <!-- Content of your section here -->
+</section>
+
+<style>
+    .animate-section {
+        opacity: 0;
+    }
+
+    .animate-left.animate {
+        animation: moveLeft 2s ease-in-out forwards;
+    }
+
+    .animate-right.animate {
+        animation: moveRight 2s ease-in-out forwards;
+    }
+
+    .animate-top.animate {
+        animation: moveTop 2s ease-in-out forwards;
+    }
+
+    .animate-bottom.animate {
+        animation: moveBottom 2s ease-in-out forwards;
+    }
+
+    @keyframes moveLeft {
+        0% {
+            opacity: 0;
+            transform: translateX(-20%);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes moveRight {
+        0% {
+            opacity: 0;
+            transform: translateX(20%);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes moveTop {
+        0% {
+            opacity: 0;
+            transform: translateY(20%);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes moveBottom {
+        0% {
+            opacity: 0;
+            transform: translateY(-20%);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+
+<script>
+    function animateSectionsOnScroll() {
+        var sections = document.querySelectorAll('.animate-section');
+
+        function checkSectionVisibility() {
+            for (var i = 0; i < sections.length; i++) {
+                var section = sections[i];
+                var sectionTop = section.getBoundingClientRect().top;
+                var sectionBottom = section.getBoundingClientRect().bottom;
+                var windowHeight = window.innerHeight;
+
+                if (sectionTop < windowHeight && sectionBottom >= 0) {
+                    section.classList.add('animate');
+                } else {
+                    section.classList.remove('animate');
+                }
+            }
+        }
+
+        // Check section visibility on page load
+        checkSectionVisibility();
+
+        // Check section visibility on page scroll
+        window.addEventListener('scroll', checkSectionVisibility);
+    }
+
+    // Initialize the animation on page scroll
+    animateSectionsOnScroll();
+
+</script>
