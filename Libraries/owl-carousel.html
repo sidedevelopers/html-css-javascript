@@ -12,33 +12,47 @@ Github: https://github.com/OwlCarousel2/OwlCarousel2
         background-color: var(--color-primary);
     }
 
-    /* Set Nav in left & right */
-    .owl-carousel .owl-nav {
+    /* left right arrow start */ 
+    /* add class .left-right-arrow e.g. <div class="owl-carousel owl-theme left-right-arrow"> */
+    .left-right-arrow .owl-nav {
         position: absolute;
-        top: 50%;
+        top: 40%;
         transform: translateY(-50%);
         width: 100%;
         display: flex;
         justify-content: space-between;
         z-index: -1;
-        /* use when on hover not working */
     }
 
-    .owl-carousel .owl-nav .owl-prev {
-        margin-left: -30px;
-        /* Adjust as needed */
+    .left-right-arrow .owl-nav .owl-prev {
+        margin-left: -60px;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    .owl-carousel .owl-nav .owl-next {
-        margin-right: -30px;
-        /* Adjust as needed */
+    .left-right-arrow .owl-nav .owl-next {
+        margin-right: -60px;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    /* icon background remove on hover */
-    .owl-theme .owl-nav [class*="owl-"]:hover {
-        background: transparent;
-        color: var(--color-primary);
+    .left-right-arrow .owl-nav .owl-prev span {
+        font-size: 35px;
     }
+
+    .left-right-arrow .owl-nav .owl-next span {
+        font-size: 35px;
+    }
+
+    /* left right arrow end */
 </style>
 
 <script>
