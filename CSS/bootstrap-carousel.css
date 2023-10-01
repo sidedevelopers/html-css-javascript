@@ -4,7 +4,7 @@
     height: 12px;
     border-radius: 50%;
     background-color: var(--color-secondary);
-}
+} 
 .carousel-indicators .active {
     background-color: var(--color-primary);
 }
