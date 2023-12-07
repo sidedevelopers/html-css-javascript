@@ -1,18 +1,26 @@
 /* global css start */
-
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
 :root {
     --color-primary: #7e34b6;
     --color-secondary: #fdf4f3;
     --color-heading: #3c424f;
+    --color-border-gray: #ddd;
+    --font-lora: 'Lora', serif;
 }
 .form-control:focus {
     box-shadow: unset;
 }
-a,
-a:hover {
-    color: var(--color-primary);
+a {
+    color: #1e1e1e;
     text-decoration: none;
-}
+  }
+  a:hover {
+    color: var(--color-primary);
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+  }
 .color-primary {
     color: var(--color-primary);
 }
