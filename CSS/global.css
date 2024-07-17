@@ -1,11 +1,14 @@
 /* global css start */
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
 :root {
     --color-primary: #7e34b6;
     --color-secondary: #fdf4f3;
     --color-heading: #3c424f;
     --color-border-gray: #ddd;
     --font-lora: 'Lora', serif;
+    --font-roboto: "Roboto", sans-serif;
 }
 .form-control:focus {
     box-shadow: unset;
@@ -41,5 +44,6 @@ a {
 }
 /* @media only screen and (max-width: 768px){ */
 /* @media only screen and (min-width: 768.1px) and (max-width: 992px){ */
+/* @media only screen and (min-width: 350px) and (max-width: 400px) { */
 
 /* global css end */
