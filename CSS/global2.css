@@ -1,0 +1,46 @@
+/* global start */
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+
+:root {
+    --color-primary: #7e34b6;
+    --color-secondary: #fdf4f3;
+    --color-tertiary: #ffffff;
+    --font-lora: 'Lora', serif;
+    --font-roboto: "Roboto", sans-serif;
+    --font-pt-sans: "PT Sans", sans-serif; /* Heading - The Europe Time */
+}
+a {
+    text-decoration: none;
+    color: #1e1e1e;
+    /* color: #000; */
+}
+a:hover{
+    color: var(--color-primary);
+    /* text-decoration: underline; */
+}
+.form-control:focus {
+    box-shadow: unset;
+}
+.color-primary {
+    color: var(--color-primary);
+}
+.color-secondary {
+    color: var(--color-secondary);
+}
+.color-tertiary{
+    color: var(--color-tertiary);
+}
+.background-primary{
+    background-color: var(--color-primary);
+}
+.background-secondary{
+    background-color: var(--color-secondary);
+}
+.background-tertiary{
+    background-color: var(--color-tertiary);
+}
+
+/* global end */
